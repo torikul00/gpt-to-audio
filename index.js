@@ -19,6 +19,7 @@ const openai = new OpenAI({
     apiKey: process.env.API_KEY
 })
 
+
 app.post('/texttospeech', async (req, res) => {
 
     const text = req.body.text;
@@ -28,7 +29,7 @@ app.post('/texttospeech', async (req, res) => {
     });
 
     const gptResponseText =  completion.choices[0].message.content
-    console.log(gptResponseText)
+  
 
   
     const request = {
